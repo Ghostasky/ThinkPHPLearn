@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="http://localhost/tp6/public/verify/token" method="post">
+    <input type="text" name="name">
+    <input type="text" name="__token__" value="{:token()}" size="40">
+    <input type="submit" value="提交验证">
+</form>
+
+</body>
+</html>

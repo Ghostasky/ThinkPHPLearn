@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{eq name="name" value="Mr.Lee"}
+    相等
+{/eq}
+
+{eq name="name" value="$name2"}
+    相等
+{else/}
+    不相等
+{/eq}
+
+{compare name="name" value="Mr.Lee" type="eq"}
+    相等
+{/compare}
+
+{assign name="var" value="123"}
+{$var}
+
+{define name="PI" value="3.14"}
+{$Think.const.PI}
+
+原生编码：1.require()；2.engine()；3.php标签
+
+{php}
+    echo 123;
+{/php}
+echo 123;
+
+</body>
+</html>

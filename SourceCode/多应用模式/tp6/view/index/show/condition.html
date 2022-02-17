@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{switch $number}
+    {case 1|2|3|4}上{/case}
+    {case 5|6|7|8}中{/case}
+    {case $id}下{/case}
+    {default/}不存在
+{/switch}
+
+
+{if ($number >= 10) OR ($number > 5)}
+    OK
+{elseif $number < 5}
+    OOK
+{else/}
+    NOT OK
+{/if}
+
+{if strtoupper($name) == 'MR.LEE'}
+    相等
+{/if}
+
+{in name="$number" value="10,20,30,40,50"}
+存在
+{else/}
+不存在
+{/in}
+
+{between name="$number" value="10,50"}存在{/between}
+
+{present name="$number"}变量已定义{/present}
+
+
+</body>
+</html>

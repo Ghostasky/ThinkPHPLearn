@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{$arr.name|default='没有姓名'}--{$arr.age}
+<br>
+{$obj->name}--{$obj->age}--{$obj->fn()}--{$obj::PI}
+<br>
+{$Request.get.id}
+{$Request.param.id}
+{$Request.host}
+{$Think.const.PHP_VERSION}
+{$Think.PHP_VERSION}
+{$Think.config.app.app_host}
+{$Think.config.session.name}
+<br>
+
+{$password|md5|raw}--{$time|date='Y-m-d'}
+<br>
+{$arr.name|substr=0,3}--{:md5(substr($arr.name, 0, 3))}
+<br>
+{$number + $number|md5}
+<br>
+{$arr.name ? '正确' : '错误'}
+{$arr.name ?= '真'}
+{$Request.get.id ?? '不存在'}
+{$arr.name ?: '不存在'}
+
+</body>
+</html>
