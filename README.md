@@ -1,6 +1,69 @@
 [toc]
-
 # ThinkPHP6
+
+差不多小过了一下thinkphp的框架。
+
+官方的文档和目录中的讲义都比较好。
+
+End.....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -130,4 +193,25 @@ class Demo1 extends BaseController
 根目录的 config 下的 database.php 可以设置数据库连接信息；
 
 
+
+# 08 数据库的数据查询
+
+一．单数据查询 
+
+1. Db::table()中 table 必须指定完整数据表（包括前缀）；
+2. 如果希望只查询一条数据，可以使用 find()方法，需指定where 条件；
+`Db::table('tp_user')->where('id', 27)->find()` 
+3. `Db::getLastSql()`方法，可以得到最近一条 SQL 查询的原生语句；``SELECT * FROM `tp_user` LIMIT 1 ``
+4. 没有查询到任何值，则返回 null； 
+5. 使用 `findOrFail()`方法同样可以查询一条数据，在没有数据时抛出一个异常；``Db::table('tp_user')->where('id', 1)->findOrFail() ``
+6. 使用 findOrEmpty()方法也可以查询一条数据，但在没有数据时返回一个空数组；
+7. Db::table('tp_user')->where('id', 1)->findOrEmpty();
+
+# 09 数据库链式查询
+
+# 10 数据库数据新增
+
+# 11 数据库删除修改
+
+# 12 数据库查询表达式
 
